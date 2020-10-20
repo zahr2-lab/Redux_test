@@ -1,23 +1,11 @@
 import React from "react";
 import Card from "../Card/Card";
 import "./ProductsList.scss";
+import "./products";
 
-const products = [
-  {
-    id: 1,
-    name: "apple",
-    price: 3
-  },
-  {
-    id: 2,
-    name: "banana",
-    price: 5
-  }
-];
-
-const ProductList = () => {
+const ProductList = (props) => {
   return (
-    <div className="productsList">
+    <div className={`productsList ${props.list && "listView"}`}>
       {products.map((product) => (
         <Card product={product} key={product.id} />
       ))}

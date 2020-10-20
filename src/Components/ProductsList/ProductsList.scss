@@ -4,5 +4,7 @@
 }
 
 .listView{
-  flex-direction: column; 
+  flex-direction: column;
+  overflow: scroll;
+
 }

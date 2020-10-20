@@ -1,11 +1,15 @@
-import React from "react";
-import Product from "./Components/ProductsList/ProductsList";
+import React, { useState } from "react";
+import Page from "./Components/Page/Page";
+import TopBar from "./Components/TopBar/TopBar";
 import "./styles.css";
 
 export default function App() {
+  const [list, setList] = useState(false);
+
   return (
     <div className="App">
-      <Product />
+      <TopBar list={list} setList={setList} />
+      <Page list={list} />
     </div>
   );
 }
